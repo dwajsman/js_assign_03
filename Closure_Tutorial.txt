@@ -8,10 +8,10 @@
 				 | |___| | (_) \__ \ |_| | | |  __/
 				  \____|_|\___/|___/\__,_|_|  \___|
 				      
-		                                     Tutorial
+		                                           Tutorial
 
 
-									by Daniel Wajsman                                 
+					           by Daniel Wajsman                                 
 
 
 
