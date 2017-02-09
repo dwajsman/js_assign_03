@@ -92,8 +92,7 @@ definition but pass different values. And this is how Closures are made.
 
 References:
 
-Javascript Closure tutorial ( Closures Explained )
-https://www.youtube.com/watch?v=71AtaJpJHw0
+http://eloquentjavascript.net/03_functions.html
 
 Closures - Part 5 of Functional Programming in JavaScript 
 by funfunfunction
