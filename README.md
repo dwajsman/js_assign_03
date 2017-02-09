@@ -1,1 +1,108 @@
-# js_assign_03
+
+
+
+				The Ultimate						
+				   ____ _                          
+				  / ___| | ___  ___ _   _ _ __ ___ 
+				 | |   | |/ _ \/ __| | | | '__/ _ \
+				 | |___| | (_) \__ \ |_| | | |  __/
+				  \____|_|\___/|___/\__,_|_|  \___|
+				      
+		                                     Tutorial
+
+
+									by Daniel Wajsman                                 
+
+
+
+1.0 - Introduction - Scope
+
+Most programming languages have the concept of scope. Think of it as the 'space' 
+where the code will access a variable.
+
+In JavaScript, there are two kinds of 'spaces' available for the programmer.
+A Global one, available throughout the code, and the Local 'space', inside a function
+(or inside 'brackets'), that can access variables from outside such functions, 
+but variables created inside functions are not accessible outside its 'brackets'.
+
+Exemple:
+
+		let numberOne = 1;
+
+		let addTwo = function(){
+			
+			let numberTwo = 2;
+			return numberOne + numberTwo;
+
+		};
+
+		console.log(addTwo());
+		// 3
+		// The function 'addTwo' has access to the Global variable 'numberOne' 
+	
+
+		console.log(numberTwo);
+		// numberTwo is not defined
+		// Outside the function the code can't access the variable inside 'addTwo'
+
+
+
+2.0 - Closure 
+
+In JavaScript there is the possibility of assigning a function to a variable. 
+And that opens a lot of possibilities. 
+
+Being able to reference a particular instance of local variables in an enclosing 
+function is called Closure. 
+
+Closures are useful because they associate some data with a function that operates 
+on that data.
+
+So let's transform the above exemple into a Closure:
+
+
+
+		let addNumber = function(numberA){
+			
+			return function(numberB){
+
+			return numberA + numberB;
+
+			};
+
+		};
+
+
+		let numberOne = (addNumber(1));
+		let numberTwo = (addNumber(2));
+
+		console.log(numberOne(2));
+		// 3 
+		
+		console.log(numberTwo(2));
+		// 4
+
+
+numberOne and numberTwo are now both Closures. They share the same function as body 
+definition but pass different values. And this is how Closures are made. 
+
+
+========================================================================================
+
+
+References:
+
+Javascript Closure tutorial ( Closures Explained )
+https://www.youtube.com/watch?v=71AtaJpJHw0
+
+Closures - Part 5 of Functional Programming in JavaScript 
+by funfunfunction
+https://www.youtube.com/watch?v=CQqwU2Ixu-U
+
+Closures
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+Michel Feinstein 
+https://github.com/feinstein
+
+http://www.network-science.de/ascii/
